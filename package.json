@@ -1,0 +1,33 @@
+{
+  "name": "styled-components-library",
+  "version": "0.0.1",
+  "description": "radix ui based component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verthon/styled-components-library.git"
+  },
+  "keywords": [
+    "headless",
+    "ui"
+  ],
+  "author": "Verthon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Verthon/styled-components-library/issues"
+  },
+  "homepage": "https://github.com/Verthon/styled-components-library#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/react": "^18.0.21",
+    "react": "^18.2.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.8.3"
+  }
+}
