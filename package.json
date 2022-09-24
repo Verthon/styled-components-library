@@ -1,45 +1,63 @@
 {
-	"name": "styled-components-library",
-	"version": "0.0.1",
-	"description": "radix ui based component library",
-	"main": "dist/cjs/index.js",
-	"scripts": {
-		"build": "rollup -c",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Verthon/styled-components-library.git"
-	},
-	"keywords": [
-		"headless",
-		"ui"
-	],
-	"author": "Verthon",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/Verthon/styled-components-library/issues"
-	},
-	"homepage": "https://github.com/Verthon/styled-components-library#readme",
-	"devDependencies": {
-		"@rollup/plugin-commonjs": "^22.0.2",
-		"@rollup/plugin-node-resolve": "^14.1.0",
-		"@rollup/plugin-typescript": "^8.5.0",
-		"@types/react": "^18.0.21",
-		"@types/styled-components": "^5.1.26",
-		"react": "^18.2.0",
-		"rollup": "^2.79.1",
-		"rollup-plugin-dts": "^4.2.2",
-		"styled-components": "^5.3.5",
-		"tslib": "^2.4.0",
-		"typescript": "^4.8.3"
-	},
-	"module": "dist/esm/index.js",
-	"files": [
-		"dist"
-	],
-	"types": "dist/index.d.ts",
-	"peerDependencies": {
-		"styled-components": ">= 3"
-	}
+  "name": "styled-components-library",
+  "version": "0.0.1",
+  "description": "radix ui based component library",
+  "main": "dist/cjs/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verthon/styled-components-library.git"
+  },
+  "keywords": [
+    "headless",
+    "ui"
+  ],
+  "author": "Verthon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Verthon/styled-components-library/issues"
+  },
+  "homepage": "https://github.com/Verthon/styled-components-library#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^17.0.50",
+    "@types/react-dom": "^17.0.17",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^18.2.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "styled-components": "^5.3.5",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "styled-components": ">= 5",
+    "react-is": "18.2.0",
+    "react": ">= 17",
+    "react-dom": ">= 17"
+  }
 }
