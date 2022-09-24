@@ -1,40 +1,45 @@
 {
-  "name": "styled-components-library",
-  "version": "0.0.1",
-  "description": "radix ui based component library",
-  "main": "dist/cjs/index.js",
-  "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Verthon/styled-components-library.git"
-  },
-  "keywords": [
-    "headless",
-    "ui"
-  ],
-  "author": "Verthon",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Verthon/styled-components-library/issues"
-  },
-  "homepage": "https://github.com/Verthon/styled-components-library#readme",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^14.1.0",
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@types/react": "^18.0.21",
-    "react": "^18.2.0",
-    "rollup": "^2.79.1",
-    "rollup-plugin-dts": "^4.2.2",
-    "tslib": "^2.4.0",
-    "typescript": "^4.8.3"
-  },
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts"
+	"name": "styled-components-library",
+	"version": "0.0.1",
+	"description": "radix ui based component library",
+	"main": "dist/cjs/index.js",
+	"scripts": {
+		"build": "rollup -c",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Verthon/styled-components-library.git"
+	},
+	"keywords": [
+		"headless",
+		"ui"
+	],
+	"author": "Verthon",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Verthon/styled-components-library/issues"
+	},
+	"homepage": "https://github.com/Verthon/styled-components-library#readme",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^22.0.2",
+		"@rollup/plugin-node-resolve": "^14.1.0",
+		"@rollup/plugin-typescript": "^8.5.0",
+		"@types/react": "^18.0.21",
+		"@types/styled-components": "^5.1.26",
+		"react": "^18.2.0",
+		"rollup": "^2.79.1",
+		"rollup-plugin-dts": "^4.2.2",
+		"styled-components": "^5.3.5",
+		"tslib": "^2.4.0",
+		"typescript": "^4.8.3"
+	},
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts",
+	"peerDependencies": {
+		"styled-components": ">= 3"
+	}
 }
