@@ -50,3 +50,7 @@ Thumbs.db
 
 # Tests
 coverage
+
+# Storybook
+/storybook-static
+*.stories.d.ts
