@@ -1,5 +1,5 @@
 export type ButtonProps = {
   children: React.ReactNode
-  loading?: boolean;
-  disabled?: boolean;
+  loading?: boolean
+  disabled?: boolean
 }

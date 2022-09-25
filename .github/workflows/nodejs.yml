@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js version 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.13.0'  
+      - name: Install dependencies
+        run: npm ci
+      - name: Run linter
+        run: npm run lint  
+      - name: Run unit and integration tests
+        run: npm run test:ci
+      - name: Run build
+        run: npm run build

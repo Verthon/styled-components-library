@@ -10,7 +10,7 @@ export const baseTheme = {
       main: '#f44336',
       dark: '#ba000d',
     },
-  }
+  },
 }
 
-export type BaseTheme = typeof baseTheme;
+export type BaseTheme = typeof baseTheme
