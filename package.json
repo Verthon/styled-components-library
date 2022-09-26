@@ -31,6 +31,7 @@
   "homepage": "https://github.com/Verthon/styled-components-library#readme",
   "devDependencies": {
     "@babel/core": "^7.19.1",
+    "@radix-ui/react-visually-hidden": "^1.0.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
