@@ -10,6 +10,18 @@ export const baseTheme = {
       main: '#f44336',
       dark: '#ba000d',
     },
+    white: {
+      light: '#ffffff',
+      main: '#ffffff',
+    },
+    danger: {
+      light: '#C62E07',
+      main: '#C62E07',
+    },
+    disabled: {
+      light: '#C4D0D5',
+      main: '#C4D0D5',
+    },
   },
 }
 

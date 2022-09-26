@@ -16,6 +16,7 @@ html, body {
 }
 body {
   line-height: 1.5;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 img, picture, video, canvas, svg {
