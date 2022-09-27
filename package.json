@@ -87,5 +87,8 @@
     "react-dom": ">= 17",
     "react-is": "18.2.0",
     "styled-components": ">= 5"
+  },
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.0"
   }
 }
