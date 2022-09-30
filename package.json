@@ -89,6 +89,7 @@
     "styled-components": ">= 5"
   },
   "dependencies": {
-    "@radix-ui/react-checkbox": "^1.0.0"
+    "@radix-ui/react-checkbox": "^1.0.0",
+    "@radix-ui/react-radio-group": "^1.0.0"
   }
 }

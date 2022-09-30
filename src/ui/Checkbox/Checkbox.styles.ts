@@ -20,7 +20,7 @@ const CheckboxRoot = styled(RCheckbox.Root)(
   `,
 )
 
-CheckboxRoot.displayName = 'LChecboxRoot'
+CheckboxRoot.displayName = 'LCheckboxRoot'
 
 const CheckboxIndicator = styled(RCheckbox.Indicator)(
   ({ theme }) => css`
