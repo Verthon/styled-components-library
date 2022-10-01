@@ -9,9 +9,9 @@ const Button = styled.button<ButtonStyleProps>(
     color: ${$textColor};
     border: 1px solid ${$borderColor};
     line-height: 1;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0 0.5rem;
 
     &:disabled {

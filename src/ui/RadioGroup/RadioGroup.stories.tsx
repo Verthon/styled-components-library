@@ -15,7 +15,7 @@ Default.args = {
   children: (
     <>
       <Radio value="Greek" />
-      <Radio value="Shang" />
+      <Radio disabled value="Shang" />
       <Radio value="Phoenician" />
     </>
   ),

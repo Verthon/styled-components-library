@@ -10,11 +10,17 @@ const Radio = styled(RadioGroupPrimitive.Item)(
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 100%;
-    &:hover {
-      box-shadow: 0 0 0 2px black;
+
+    &:disabled {
+      border: 2px solid ${theme.colors.disabled.main};
+      cursor: not-allowed;
+    }
+    &:hover:not([disabled]) {
+      cursor: pointer;
+      box-shadow: ${theme.shadows.low};
     }
     &:focus {
-      box-shadow: 0 0 0 2px black;
+      box-shadow: ${theme.shadows.low};
     }
   `,
 )
