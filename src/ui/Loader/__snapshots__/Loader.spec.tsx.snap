@@ -83,6 +83,7 @@ exports[`Loader should render Loader with different height and width and thickne
 <body>
     <div>
       <div
+        aria-label="spinner"
         class="c0"
         color="inherit"
         height="100"
@@ -175,6 +176,7 @@ exports[`Loader should render Loader with different height and width and thickne
 
 <div>
     <div
+      aria-label="spinner"
       class="c0"
       color="inherit"
       height="100"

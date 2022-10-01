@@ -20,6 +20,7 @@ const Loader = ({ width, height, thickness, className, color }: LoaderProps) => 
       className={className}
       role="progressbar"
       color={color || 'inherit'}
+      aria-label="spinner"
     >
       <Styled.InnerElement thickness={currentThickness} color={color || 'inherit'} />
     </Styled.Wrapper>

@@ -9,7 +9,7 @@ export const RadioGroup = ({ children }: RadioGroupProps) => {
 
 export const Radio = ({ value, disabled }: RadioProps) => {
   return (
-    <Styled.Radio value={value} disabled={disabled}>
+    <Styled.Radio value={value} disabled={disabled} aria-label={value}>
       <Styled.RadioIndicator />
     </Styled.Radio>
   )
