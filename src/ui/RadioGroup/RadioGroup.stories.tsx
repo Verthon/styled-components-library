@@ -14,14 +14,32 @@ Default.args = {
   defaultValue: 'Phoenician',
   children: (
     <>
-      <Radio value="Greek" />
-      <Radio disabled value="Shang" />
-      <Radio value="Phoenician" />
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio value="Greek" />
+      </div>
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio value="Phoenician" />
+      </div>
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio value="Yamato" />
+      </div>
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio value="Shang" />
+      </div>
     </>
   ),
 }
 
-// export const Disabled = Template.bind({})
-// Disabled.args = {
-//   disabled: true,
-// }
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: (
+    <>
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio disabled checked value="Palmyran" />
+      </div>
+      <div style={{ margin: '0.5rem 0' }}>
+        <Radio disabled value="Macedonian" />
+      </div>
+    </>
+  ),
+}

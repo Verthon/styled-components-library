@@ -5,9 +5,9 @@ import { Styled } from './Button.styles'
 import type { ButtonProps } from './Button.types'
 
 const HEIGHT = {
-  sm: 34,
-  md: 40,
-  lg: 50,
+  sm: 36,
+  md: 46,
+  lg: 60,
 }
 
 const Button = ({ children, disabled, loading, size, variant = 'filled', color = 'primary' }: ButtonProps) => {

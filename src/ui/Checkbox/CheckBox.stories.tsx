@@ -9,9 +9,20 @@ export default {
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />
 
-export const Default = Template.bind({})
+export const Unchecked = Template.bind({})
 
-export const Disabled = Template.bind({})
-Disabled.args = {
+export const Checked = Template.bind({})
+Checked.args = {
+  value: 'on',
+}
+
+export const DisabledUnchecked = Template.bind({})
+DisabledUnchecked.args = {
   disabled: true,
+}
+
+export const DisabledChecked = Template.bind({})
+DisabledChecked.args = {
+  disabled: true,
+  value: 'on',
 }
