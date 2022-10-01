@@ -6,12 +6,15 @@ const CheckboxRoot = styled(RCheckbox.Root)(
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 20px;
-    border-radius: 4px;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 0.25rem;
     border-color: transparent;
-    background-color: ${theme.colors.primary.main};
     cursor: pointer;
+
+    &[data-state='checked'] {
+      background-color: ${theme.colors.primary.main};
+    }
 
     &:disabled {
       background-color: ${theme.colors.disabled.main};
@@ -20,10 +23,11 @@ const CheckboxRoot = styled(RCheckbox.Root)(
   `,
 )
 
-CheckboxRoot.displayName = 'LChecboxRoot'
+CheckboxRoot.displayName = 'LCheckboxRoot'
 
 const CheckboxIndicator = styled(RCheckbox.Indicator)(
   ({ theme }) => css`
+    margin-top: 0.15rem;
     color: ${theme.colors.white.main};
   `,
 )
