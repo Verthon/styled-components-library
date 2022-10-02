@@ -1,4 +1,4 @@
-# styled-components-library
+# The Library 😉
 Simple library that shows how easy is to setup styled-components and Radix UI.
 Library uses modern approach with ci-cd and all that stuff.
 
