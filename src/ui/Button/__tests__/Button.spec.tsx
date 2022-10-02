@@ -1,8 +1,7 @@
 import { screen } from '@testing-library/dom'
 
-import { createTestWrapper } from '../../tests/utils'
-
-import Button from './Button'
+import { createTestWrapper } from '../../../tests/utils'
+import Button from '../Button'
 
 describe('Button', () => {
   it('should render button with its children', () => {

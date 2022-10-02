@@ -1,20 +1,22 @@
 import styled, { css } from 'styled-components'
 
-import type { ButtonContentStyleProps, ButtonStyleProps } from './Button.types'
+import type { ButtonContentStyleProps, ButtonLoaderContainerStyleProps, ButtonStyleProps } from './Button.types'
+import { getFontSize, getHeight, getPadding } from './Button.utils'
 
 const Button = styled.button<ButtonStyleProps>(
-  ({ theme, height, $bgColor, $textColor, $borderColor }) => css`
+  ({ $bgColor, $textColor, $borderColor, $size }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: ${height}px;
+    height: ${getHeight($size)};
     background-color: ${$bgColor};
     color: ${$textColor};
-    border: 1px solid ${$borderColor};
+    border: 2px solid ${$borderColor};
     line-height: 1;
     border-radius: 2.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: ${getFontSize($size)};
+    font-weight: 600;
 
     &:disabled {
       opacity: 0.5;
@@ -30,10 +32,10 @@ const Button = styled.button<ButtonStyleProps>(
 Button.displayName = 'LButton'
 
 const Content = styled.span<ButtonContentStyleProps>(
-  ({ $loading }) => css`
+  ({ $loading, $size }) => css`
     letter-spacing: 0.75px;
     line-height: 1.75rem;
-    padding: 1.125rem 2rem;
+    padding: ${getPadding($size)};
     position: relative;
     visibility: ${$loading ? 'hidden' : 'inherit'};
     height: ${$loading ? 0 : 'auto'};
@@ -42,9 +44,9 @@ const Content = styled.span<ButtonContentStyleProps>(
 
 Content.displayName = 'LButton--Content'
 
-const LoaderContainer = styled.div(
-  () => css`
-    padding: 1.125rem 2rem;
+const LoaderContainer = styled.div<ButtonLoaderContainerStyleProps>(
+  ({ $size }) => css`
+    padding: ${getPadding($size)};
     position: absolute;
     z-index: 2;
   `,
