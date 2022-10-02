@@ -10,12 +10,14 @@ export type ButtonProps = {
 }
 
 export type ButtonStyleProps = Pick<ButtonProps, 'disabled'> & {
-  height: number
+  $size: BasicSizes
   $bgColor: string
   $textColor: string
   $borderColor: string
 }
 
-export type ButtonContentStyleProps = {
+export type ButtonContentStyleProps = Pick<ButtonStyleProps, '$size'> & {
   $loading?: boolean
 }
+
+export type ButtonLoaderContainerStyleProps = Pick<ButtonContentStyleProps, '$size'>

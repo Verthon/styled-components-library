@@ -6,21 +6,44 @@ const Radio = styled(RadioGroupPrimitive.Item)(
     display: flex;
     align-items: center;
     background-color: transparent;
-    border: 2px solid ${theme.colors.primary.main};
+    border: 2px solid ${theme.colors.grey[200].main};
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 100%;
 
+    &[data-state='checked'] {
+      outline: 0;
+      border: 2px solid ${theme.colors.primary.main};
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: ${theme.colors.grey[50].main} 0 0 0 0.35rem;
+    }
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: ${theme.colors.grey[50].main} 0 0 0 0.35rem;
+    }
+
+    &[data-state='checked']:focus {
+      outline: 0;
+      box-shadow: ${theme.colors.primary.light} 0 0 0 0.35rem;
+    }
+
+    &[data-state='checked']:focus-visible {
+      outline: 0;
+      box-shadow: ${theme.colors.primary.light} 0 0 0 0.35rem;
+    }
+
     &:disabled {
-      border: 2px solid ${theme.colors.disabled.main};
+      opacity: 0.5;
       cursor: not-allowed;
     }
+
     &:hover:not([disabled]) {
       cursor: pointer;
-      box-shadow: ${theme.shadows.low};
-    }
-    &:focus {
-      box-shadow: ${theme.shadows.low};
+      filter: brightness(0.85);
     }
   `,
 )

@@ -1,4 +1,4 @@
 export type CheckboxProps = {
-  value?: string
+  value?: 'on' | 'off'
   disabled?: boolean
 }

@@ -3,15 +3,11 @@ import Loader from '../Loader/Loader'
 
 import { Styled } from './Button.styles'
 import type { ButtonProps } from './Button.types'
-
-const HEIGHT = {
-  sm: 34,
-  md: 40,
-  lg: 50,
-}
+import { getLoaderHeight } from './Button.utils'
 
 const Button = ({ children, disabled, loading, size, variant = 'filled', color = 'primary' }: ButtonProps) => {
-  const height = HEIGHT[size || 'md']
+  const loaderHeight = getLoaderHeight(size)
+  const loaderWidth = loaderHeight
   const BG_COLOR = {
     disabled: baseTheme.colors.disabled.main,
     filled: baseTheme.colors[color].main,
@@ -21,32 +17,35 @@ const Button = ({ children, disabled, loading, size, variant = 'filled', color =
   const bgColor = BG_COLOR[variant]
   const textColor = variant === 'outline' ? baseTheme.colors[color].main : baseTheme.colors.white.main
   const borderColor = variant === 'outline' ? baseTheme.colors[color].main : 'transparent'
+  const currentSize = size || 'md'
 
   if (loading) {
     return (
       <Styled.Button
-        height={height}
+        $size={currentSize}
         $bgColor={bgColor}
         $textColor={textColor}
         $borderColor={borderColor}
         data-loading={true}
       >
-        <Styled.LoaderContainer>
-          <Loader width={height / 2} height={height / 2} thickness={2} />
+        <Styled.LoaderContainer $size={currentSize}>
+          <Loader width={loaderWidth} height={loaderHeight} thickness={2} />
         </Styled.LoaderContainer>
-        <Styled.Content $loading>{children}</Styled.Content>
+        <Styled.Content $size={currentSize} $loading>
+          {children}
+        </Styled.Content>
       </Styled.Button>
     )
   }
   return (
     <Styled.Button
-      disabled={disabled}
-      height={height}
+      $size={currentSize}
       $bgColor={bgColor}
       $textColor={textColor}
       $borderColor={borderColor}
+      disabled={disabled}
     >
-      <Styled.Content>{children}</Styled.Content>
+      <Styled.Content $size={currentSize}>{children}</Styled.Content>
     </Styled.Button>
   )
 }
