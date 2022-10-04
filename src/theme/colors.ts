@@ -9,17 +9,23 @@ export const colors = {
     main: '#f44336',
     dark: '#ba000d',
   },
+  success: {
+    light: '#53b594',
+    main: '#53b594',
+    dark: '#006e51',
+  },
+  danger: {
+    light: '#CD4941',
+    main: '#CD4941',
+    dark: '#CD4941',
+  },
   white: {
     light: '#ffffff',
     main: '#ffffff',
   },
-  balck: {
+  black: {
     light: '#000000',
     main: '#000000',
-  },
-  danger: {
-    light: '#C62E07',
-    main: '#C62E07',
   },
   disabled: {
     light: '#C4D0D5',
