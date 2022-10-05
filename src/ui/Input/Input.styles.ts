@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components'
 
+import type { InputStyleProps } from './Input.types'
+import { getPadding } from './Input.utils'
+
 const Wrapper = styled.div(
   () => css`
     position: relative;
@@ -8,9 +11,9 @@ const Wrapper = styled.div(
 
 Wrapper.displayName = 'LInput--Wrapper'
 
-const Input = styled.input(
-  ({ theme }) => css`
-    padding: 0.5rem 1rem;
+const Input = styled.input<InputStyleProps>(
+  ({ theme, $size }) => css`
+    padding: ${getPadding($size)};
     border: 2px solid ${theme.colors.grey[200].main};
     border-radius: 0.5rem;
 
@@ -28,8 +31,9 @@ const Input = styled.input(
 
 Input.displayName = 'LInput'
 
-const HelperText = styled.span(
+const HelperText = styled.p(
   () => css`
+    margin-top: 0.5rem;
     font-size: 0.875rem;
     letter-spacing: 0.25px;
   `,

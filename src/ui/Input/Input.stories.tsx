@@ -19,3 +19,9 @@ Disabled.args = {
   disabled: true,
   placeholder: 'Disabled',
 }
+
+export const WithHelper = Template.bind({})
+WithHelper.args = {
+  placeholder: 'With helper text',
+  helperText: 'Something useful here',
+}
