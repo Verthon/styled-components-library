@@ -1,6 +1,8 @@
 import type { BasicSizes } from '../../types/sizes'
 
 export type InputProps = {
+  name?: string
+  id?: string
   disabled?: boolean
   placeholder?: string
   helperText?: string
